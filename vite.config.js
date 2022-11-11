@@ -9,6 +9,7 @@ export default defineConfig({
                 'resources/sass/app.scss',
                 'resources/js/app.js',
                 'resources/js/fontawesome.js',
+                'resources/css/animate_text.css'
             ],
             resolve: {
                 alias: {

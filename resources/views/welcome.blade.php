@@ -1,6 +1,6 @@
 <html>
     <head>
-        @vite(['resources/js/app.js','resources/js/fontawesome.js'])
+        @vite(['resources/js/app.js','resources/js/fontawesome.js','resources/css/animate_text.css'])
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
     </head>
     <header>
