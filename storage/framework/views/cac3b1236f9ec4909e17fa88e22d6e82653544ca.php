@@ -1,7 +1,7 @@
 <html>
     <head>
         <?php echo app('Illuminate\Foundation\Vite')(['resources/js/app.js','resources/js/fontawesome.js','resources/css/animate.min.css','resources/js/anime.es.js']); ?>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
         <link href='<?php echo e(asset('storage/assets/css/anicollection.css')); ?>' rel='stylesheet'  type='text/css'>
 
         <script src="<?php echo e(asset('storage/assets/js/typed.js')); ?>"></script>
@@ -59,7 +59,7 @@
                     -o-background-size: cover;">
                         <div class="col-md-6">
                             <div class="d-flex aligns-items-center justify-content-center" id="profile_img">
-                                <img src="<?php echo e(asset('storage/img/profile.jpg')); ?>" class="img-thumbnail rounded-circle" alt="..." width="50%">
+                                <img src="<?php echo e(asset('storage/img/Profile.jpg')); ?>" class="img-thumbnail rounded-circle" alt="..." width="50%">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -77,7 +77,11 @@
             <div class="row p-4 justify-content-end" >
                 <div class="col-md-3" data-anijs="if: mouseover, do: swing animated">
                     <div class="bg-transparent text-bg-light d-flex align-items-right " style="height: 100%;" >
-                        <p class="" ><h3 class="font-monospace">ariff.ofl@yahoo.com <i class="fa-solid fa-envelope"></i></h3></p>
+                        <div class="col-md-8">
+                            <h4><b>GET IN TOUCH</b></h4>
+                            <h3 class="font-monospace">ariff.ofl@yahoo.com</h3>
+                        </div>
+                        <div class=" col-md-4 d-flex align-items-center"><h2><i class="fa-solid fa-envelope"></i></h2></div>
                     </div>
                 </div>
             </div>
