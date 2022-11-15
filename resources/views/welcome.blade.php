@@ -1,7 +1,11 @@
 <html>
     <head>
-        @vite(['resources/js/app.js','resources/js/fontawesome.js'])
+        @vite(['resources/js/app.js','resources/js/fontawesome.js','resources/css/animate.min.css','resources/js/anime.es.js'])
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+        <link href='{{asset('storage/assets/css/anicollection.css')}}' rel='stylesheet'  type='text/css'>
+
+        <script src="{{asset('storage/assets/js/typed.js')}}"></script>
+
     </head>
     <header>
         <div>
@@ -44,15 +48,15 @@
         </div>
     </header>
     <body>
-        <div class=" container-fluid "style="background-image: url('{{asset('storage/img/abstract-dark-blue-futuristic-digital-grid-background.jpg')}}');
-        no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;">
+        <div class=" container-fluid ">
             <div class="row">
-                <div class=" col-md-12">
-                    <div class="row  p-4">
+                <div class="col-md-12">
+                    <div class="row p-4"style="background-image: url('{{asset('storage/img/abstract-dark-blue-futuristic-digital-grid-background.jpg')}}');
+                    no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    background-size: cover;
+                    -o-background-size: cover;">
                         <div class="col-md-6">
                             <div class="d-flex aligns-items-center justify-content-center" id="profile_img">
                                 <img src="{{asset('storage/img/profile.jpg')}}" class="img-thumbnail rounded-circle" alt="..." width="50%">
@@ -60,26 +64,34 @@
                         </div>
                         <div class="col-md-6">
                             <div class="bg-transparent text-bg-dark d-flex align-items-center " style="height: 100%;" >
-                                <p ><h1 class="font-monospace" style="text-align: justify;">I am Mohd Ariff <br> And I am</h1></p>
+                                <h1 class="font-monospace" style="text-align: justify;">
+                                    <p class=" animate__animated animate__fadeIn">I am Mohd Ariff <br> And I am A <br>
+                                        <span id="spin" class=" animated_text text-danger text-bg-warning"></span>
+                                    </p>
+                                </h1>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class=" col-md-4 p-2 ">
-                    <div class="row">
-                    </div>
-                    <div class="row">
-                        <div class=" ">
-
-                        </div>
-                    </div>
-                </div>
-                <div class=" col-md-8 ">
-                    <div class="row">
-                        <p>test</p>
+            </div>
+            <div class="row p-4 justify-content-end" >
+                <div class="col-md-3" data-anijs="if: mouseover, do: swing animated">
+                    <div class="bg-transparent text-bg-light d-flex align-items-right " style="height: 100%;" >
+                        <p class="" ><h3 class="font-monospace">ariff.ofl@yahoo.com <i class="fa-solid fa-envelope"></i></h3></p>
                     </div>
                 </div>
             </div>
         </div>
     </body>
 </html>
+<script>
+    var typed = new Typed(".animated_text",{
+    strings: ["Programmer","Web Developer"] ,
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true
+
+    })
+</script>
+
+<script src="{{asset('storage/assets/js/anijs.js')}}"></script>
