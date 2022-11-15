@@ -1,0 +1,29 @@
+{
+  "resources/js/app.js": {
+    "file": "assets/app.00a60492.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app.525f5899.css"
+    ]
+  },
+  "resources/js/fontawesome.js": {
+    "file": "assets/fontawesome.90b629f7.js",
+    "src": "resources/js/fontawesome.js",
+    "isEntry": true
+  },
+  "resources/js/anime.es.js": {
+    "file": "assets/anime.es.f5b130ad.js",
+    "src": "resources/js/anime.es.js",
+    "isEntry": true
+  },
+  "resources/css/animate.min.css": {
+    "file": "assets/animate.min.cf768824.css",
+    "src": "resources/css/animate.min.css",
+    "isEntry": true
+  },
+  "resources/js/app.css": {
+    "file": "assets/app.525f5899.css",
+    "src": "resources/js/app.css"
+  }
+}
