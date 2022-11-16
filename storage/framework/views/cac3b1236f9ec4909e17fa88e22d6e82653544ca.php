@@ -5,7 +5,27 @@
         <link href='<?php echo e(asset('storage/assets/css/anicollection.css')); ?>' rel='stylesheet'  type='text/css'>
 
         <script src="<?php echo e(asset('storage/assets/js/typed.js')); ?>"></script>
-
+        <style>
+            hr.style-1 {
+                height: 12px;
+                border: 0;
+                box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+            }
+            hr.style-2 {
+                border: 0;
+                height: 3px;
+                background-image: linear-gradient(to right, #0d6efd , yellow);
+            }
+            hr.style-3 {
+                border: 0;
+                height: 2; /* Firefox... */
+                box-shadow: 0 0 10px 2px #0d6efd;
+                background-image: linear-gradient(to right, #0d6efd , yellow);
+            }
+            hr.style-3:after {  /* Not really supposed to work, but does */
+                content: "\00a0";  /* Prevent margin collapse */
+            }
+        </style>
     </head>
     <header>
         <div>
@@ -48,23 +68,24 @@
         </div>
     </header>
     <body>
-        <div class=" container-fluid ">
+        <div class=" container-fluid "data-anijs="if: onRunFinished, on: $AniJSNotifier, do: animate__fadeIn animated">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="row p-4"style="background-image: url('<?php echo e(asset('storage/img/abstract-dark-blue-futuristic-digital-grid-background.jpg')); ?>');
+                    <div class="row p-4"style="background-image:linear-gradient(to bottom, rgba(0,0,0,0) 97%,
+                    rgba(255,255,255,1)), url('<?php echo e(asset('storage/img/abstract-dark-blue-futuristic-digital-grid-background.jpg')); ?>');
                     no-repeat center center fixed;
                     -webkit-background-size: cover;
                     -moz-background-size: cover;
                     background-size: cover;
                     -o-background-size: cover;">
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="d-flex aligns-items-center justify-content-center" id="profile_img">
                                 <img src="<?php echo e(asset('storage/img/Profile.jpg')); ?>" class="img-thumbnail rounded-circle" alt="..." width="50%">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="bg-transparent text-bg-dark d-flex align-items-center " style="height: 100%;" >
-                                <h1 class="font-monospace" style="text-align: justify;">
+                                <h1 class="font-monospace">
                                     <p class=" animate__animated animate__fadeIn">I am Mohd Ariff <br> And I am A <br>
                                         <span id="spin" class=" animated_text text-danger text-bg-warning"></span>
                                     </p>
@@ -75,15 +96,40 @@
                 </div>
             </div>
             <div class="row p-4 justify-content-end" >
-                <div class="col-md-3" data-anijs="if: mouseover, do: swing animated">
-                    <div class="bg-transparent text-bg-light d-flex align-items-right " style="height: 100%;" >
+                <div class="col-lg-4" data-anijs="if: onRunFinished, on: $AniJSNotifier, do: animate__fadeIn animated">
+                    <div class="row bg-transparent text-bg-light justify-end text-lg-end" style="height: 100%;" >
                         <div class="col-md-8">
-                            <h4><b>GET IN TOUCH</b></h4>
+                            <h4 class=""><b>GET IN TOUCH</b></h4>
                             <h3 class="font-monospace">ariff.ofl@yahoo.com</h3>
                         </div>
-                        <div class=" col-md-4 d-flex align-items-center"><h2><i class="fa-solid fa-envelope"></i></h2></div>
+                        <div class=" col-lg-1 align-self-lg-center"><h2><i class="fa-solid fa-envelope"></i></h2></div>
                     </div>
                 </div>
+            </div>
+            <div class="row justify-content-end">
+                <hr class=" col-md-8 border border-2 border-primary style-3" style="">
+            </div>
+            <div class="row">
+                <div class=" col-md-6">
+                    <div class="row-fluid">
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-md-6">
+                    <div class="row-fluid">
+                        <div class="col-12 ">
+                            <h2 class=" text-center display-5"><b>About Me</b></h2>
+                        </div>
+                        <div class="col-12 ">
+                            <h5 class=" text-center"><b>About Me</b></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  justify-content-start">
+                <hr class=" col-md-8 border border-2 border-primary style-3" style="">
             </div>
         </div>
     </body>
