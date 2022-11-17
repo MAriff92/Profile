@@ -69,8 +69,8 @@
     </header>
     <body>
         <div class=" container-fluid d-grid gap-3"data-anijs="if: onRunFinished, on: $AniJSNotifier, do: animate__fadeIn animated">
-            <div class="row">
-                <div class="col-md-12">
+            <div class="row pt-5">
+                <div class="col-md-12 pt-2">
                     <div class="row p-4"style="background-image:linear-gradient(to bottom, rgba(0,0,0,0) 97%,
                     rgba(255,255,255,1)), url('<?php echo e(asset('storage/img/abstract-dark-blue-futuristic-digital-grid-background.jpg')); ?>');
                     no-repeat center center fixed;
