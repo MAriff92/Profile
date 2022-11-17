@@ -80,7 +80,7 @@
                     -o-background-size: cover;">
                         <div class="col-6">
                             <div class="d-flex aligns-items-center justify-content-center" id="profile_img">
-                                <img src="{{asset('storage/img/Profile.jpg')}}" class="img-thumbnail rounded-circle" alt="..." width="50%">
+                                <img src="{{asset('storage/img/Profile.jpg')}}" class="img-thumbnail rounded-circle" alt="..." width="40%">
                             </div>
                         </div>
                         <div class="col-6">
