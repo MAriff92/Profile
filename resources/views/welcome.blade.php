@@ -29,7 +29,7 @@
     </head>
     <header>
         <div>
-            <nav class="navbar navbar-expand-lg bg-light">
+            <nav class="navbar navbar-expand-lg bg-light fixed-top">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Navbar</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +68,7 @@
         </div>
     </header>
     <body>
-        <div class=" container-fluid "data-anijs="if: onRunFinished, on: $AniJSNotifier, do: animate__fadeIn animated">
+        <div class=" container-fluid d-grid gap-3"data-anijs="if: onRunFinished, on: $AniJSNotifier, do: animate__fadeIn animated">
             <div class="row">
                 <div class="col-md-12">
                     <div class="row p-4"style="background-image:linear-gradient(to bottom, rgba(0,0,0,0) 97%,
@@ -109,7 +109,7 @@
             <div class="row justify-content-end">
                 <hr class=" col-md-8 border border-2 border-primary style-3" style="">
             </div>
-            <div class="row">
+            <div class="row ">
                 <div class=" col-md-6">
                     <div class="row-fluid">
                         <div>
@@ -118,18 +118,65 @@
                     </div>
                 </div>
                 <div class=" col-md-6">
-                    <div class="row-fluid">
-                        <div class="col-12 ">
-                            <h2 class=" text-center display-5"><b>About Me</b></h2>
+                    <div class="row-fluid ">
+                        <div class="col-12 pb-5">
+                            <h2 class="ps-4 display-5"><b>About Me</b></h2>
                         </div>
                         <div class="col-12 ">
-                            <h5 class=" text-center"><b>About Me</b></h5>
+                            <h4 class="ps-4 pb-3"><b>Current Job</b></h4>
+                            <h4 class="ps-4 font-monospace">PAKAR SCIENO TW SDN BHD</h4>
+                            <h4 class="ps-4 font-monospace">EXECUTIVE IT</h4>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row  justify-content-start">
                 <hr class=" col-md-8 border border-2 border-primary style-3" style="">
+            </div>
+            <div class="row ">
+                <div class=" col-md-6">
+                    <div class="row-fluid ">
+                        <div class="col-12 pb-5">
+                            <h2 class="ps-4 display-5"><b>Education</b></h2>
+                        </div>
+                        <div class="col-12 ">
+                            <h4 class="ps-4 pb-3"><b>Current Job</b></h4>
+                            <h4 class="ps-4 font-monospace">PAKAR SCIENO TW SDN BHD</h4>
+                            <h4 class="ps-4 font-monospace">EXECUTIVE IT</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-md-6">
+                    <div class="row-fluid">
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <hr class=" col-md-8 border border-2 border-primary style-3" style="">
+            </div>
+            <div class="row ">
+                <div class=" col-md-6">
+                    <div class="row-fluid">
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-md-6">
+                    <div class="row-fluid ">
+                        <div class="col-12 pb-5">
+                            <h2 class="ps-4 display-5"><b>Skills</b></h2>
+                        </div>
+                        <div class="col-12 ">
+                            <h4 class="ps-4 pb-3"><b>Current Job</b></h4>
+                            <h4 class="ps-4 font-monospace">PAKAR SCIENO TW SDN BHD</h4>
+                            <h4 class="ps-4 font-monospace">EXECUTIVE IT</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
