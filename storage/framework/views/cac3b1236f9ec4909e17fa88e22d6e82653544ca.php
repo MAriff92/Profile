@@ -5,6 +5,9 @@
         <link href='<?php echo e(asset('storage/assets/css/anicollection.css')); ?>' rel='stylesheet'  type='text/css'>
 
         <script src="<?php echo e(asset('storage/assets/js/typed.js')); ?>"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="<?php echo e(asset('storage/assets/js/jquery.circle-progress.min.js')); ?>"></script>
         <style>
             hr.style-1 {
                 height: 12px;
@@ -24,6 +27,18 @@
             }
             hr.style-3:after {  /* Not really supposed to work, but does */
                 content: "\00a0";  /* Prevent margin collapse */
+            }
+
+            .circle-progress-value {
+                stroke-width: 6px;
+                stroke: hsl(209, 98%, 44%);
+            }
+            .circle-progress-circle {
+                stroke-width: 6px;
+                stroke: hsl(199, 100%, 84%);
+            }
+            .circle-progress-text {
+                stroke: hsl(209, 98%, 44%);
             }
         </style>
     </head>
@@ -70,7 +85,7 @@
     <body>
         <div class=" container-fluid d-grid gap-3"data-anijs="if: onRunFinished, on: $AniJSNotifier, do: animate__fadeIn animated">
             <div class="row pt-5">
-                <div class="col-md-12 pt-2">
+                <div class="col-lg-12 pt-2">
                     <div class="row p-4"style="background-image:linear-gradient(to bottom, rgba(0,0,0,0) 97%,
                     rgba(255,255,255,1)), url('<?php echo e(asset('storage/img/abstract-dark-blue-futuristic-digital-grid-background.jpg')); ?>');
                     no-repeat center center fixed;
@@ -98,7 +113,7 @@
             <div class="row p-4 justify-content-end" >
                 <div class="col-lg-4" data-anijs="if: onRunFinished, on: $AniJSNotifier, do: animate__fadeIn animated">
                     <div class="row bg-transparent text-bg-light justify-end text-lg-end" style="height: 100%;" >
-                        <div class="col-md-8">
+                        <div class="col-lg-8">
                             <h4 class=""><b>GET IN TOUCH</b></h4>
                             <h3 class="font-monospace">ariff.ofl@yahoo.com</h3>
                         </div>
@@ -107,18 +122,18 @@
                 </div>
             </div>
             <div class="row justify-content-end">
-                <hr class=" col-md-8 border border-2 border-primary style-3" style="">
+                <hr class=" col-lg-8 border border-2 border-primary style-3" style="">
             </div>
             <div class="row ">
-                <div class=" col-md-6">
-                    <div class="row-fluid">
+                <div class=" col-lg-6">
+                    <div class="row">
                         <div>
 
                         </div>
                     </div>
                 </div>
-                <div class=" col-md-6">
-                    <div class="row-fluid ">
+                <div class=" col-lg-6">
+                    <div class="row ">
                         <div class="col-12 pb-5">
                             <h2 class="ps-4 display-5"><b>About Me</b></h2>
                         </div>
@@ -131,11 +146,11 @@
                 </div>
             </div>
             <div class="row  justify-content-start">
-                <hr class=" col-md-8 border border-2 border-primary style-3" style="">
+                <hr class=" col-lg-8 border border-2 border-primary style-3" style="">
             </div>
             <div class="row ">
-                <div class=" col-md-6">
-                    <div class="row-fluid ">
+                <div class=" col-lg-6">
+                    <div class="row ">
                         <div class="col-12 pb-5">
                             <h2 class="ps-4 display-5"><b>Education</b></h2>
                         </div>
@@ -146,7 +161,7 @@
                         </div>
                     </div>
                 </div>
-                <div class=" col-md-6">
+                <div class=" col-lg-6">
                     <div class="row-fluid">
                         <div>
 
@@ -155,25 +170,76 @@
                 </div>
             </div>
             <div class="row justify-content-end">
-                <hr class=" col-md-8 border border-2 border-primary style-3" style="">
+                <hr class=" col-lg-12 border border-2 border-primary style-3" style="">
             </div>
-            <div class="row ">
-                <div class=" col-md-6">
-                    <div class="row-fluid">
-                        <div>
-
+            <div class="row-fluid">
+                <div class="col-12 pb-5">
+                    <h2 class="ps-4 display-5 text-lg-center"><b>Skills</b></h2>
+                </div>
+                <div class="row  d-flex justify-content-lg-center ">
+                    <div class=" col-lg-4 d-flex justify-content-lg-center ">
+                        <div class="col-lg-3 pb-2">
+                            <i class="progress_laravel"  style="height: 100px; width:100px; background-color: transparent;"></i>
+                        </div>
+                        <div class="ps-5 col-lg-5 align-self-center">
+                            <h5><span> MVC</span><br><b>Laravel</b></h5>
                         </div>
                     </div>
-                </div>
-                <div class=" col-md-6">
-                    <div class="row-fluid ">
-                        <div class="col-12 pb-5">
-                            <h2 class="ps-4 display-5"><b>Skills</b></h2>
+                    <div class=" col-lg-4 d-flex justify-content-lg-center">
+                        <div class="col-lg-3 pb-2">
+                            <i class="progress"  style="height: 100px; width:100px; background-color: transparent;"></i>
                         </div>
-                        <div class="col-12 ">
-                            <h4 class="ps-4 pb-3"><b>Current Job</b></h4>
-                            <h4 class="ps-4 font-monospace">PAKAR SCIENO TW SDN BHD</h4>
-                            <h4 class="ps-4 font-monospace">EXECUTIVE IT</h4>
+                        <div class="ps-5 col-lg-5 align-self-center">
+                            <h5><span> Server Scripting</span><br><b>PHP</b></h5>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 d-flex justify-content-lg-center">
+                        <div class="col-lg-3 pb-2">
+                            <i class="progress"  style="height: 100px; width:100px; background-color: transparent;"></i>
+                        </div>
+                        <div class="ps-5 col-lg-5 align-self-center">
+                            <h5><span> Server Scripting</span><br><b>ASP.Net</b></h5>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 d-flex justify-content-lg-center">
+                        <div class="col-lg-3 pb-2">
+                            <i class="progress"  style="height: 100px; width:100px; background-color: transparent;"></i>
+                        </div>
+                        <div class="ps-5 col-lg-5 align-self-center">
+                            <h5><span> Database</span><br><b>MariaDB & Mysql</b></h5>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 d-flex justify-content-lg-center">
+                        <div class="col-lg-3 pb-2">
+                            <i class="progress"  style="height: 100px; width:100px; background-color: transparent;"></i>
+                        </div>
+                        <div class="ps-5 col-lg-5 align-self-center">
+                            <h5><span>Scripting</span><br><b>Javascript & jQuery</b></h5>
+                        </div>
+                    </div>
+
+                    <div class=" col-lg-4 d-flex justify-content-lg-center">
+                        <div class="col-lg-3 pb-2">
+                            <i class="progress"  style="height: 100px; width:100px; background-color: transparent;"></i>
+                        </div>
+                        <div class="ps-5 col-lg-5 align-self-center">
+                            <h5><span>Scripting</span><br><b>Ajax jQuery</b></h5>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 d-flex justify-content-lg-center">
+                        <div class="col-lg-3 pb-2">
+                            <i class="progress"  style="height: 100px; width:100px; background-color: transparent;"></i>
+                        </div>
+                        <div class="ps-5 col-lg-5 align-self-center">
+                            <h5><span> Front End Language</span><br><b>HTML & CSS</b></h5>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 d-flex justify-content-lg-center">
+                        <div class="col-lg-3 pb-2">
+                            <i class="progress"  style="height: 100px; width:100px; background-color: transparent;"></i>
+                        </div>
+                        <div class="ps-5 col-lg-5 align-self-center">
+                            <h5><span> CSS Framework</span><br><b>Bootstrap</b></h5>
                         </div>
                     </div>
                 </div>
@@ -183,13 +249,13 @@
     <footer>
         <div class="container">
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-              <p class="col-md-4 mb-0 text-muted">© 2022 Company, Inc</p>
+              <p class="col-lg-4 mb-0 text-muted">© 2022 Company, Inc</p>
 
-              <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+              <a href="/" class="col-lg-4 d-flex align-items-center justify-content-center mb-3 mb-lg-0 me-lg-auto link-dark text-decoration-none">
                 <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
               </a>
 
-              <ul class="nav col-md-4 justify-content-end">
+              <ul class="nav col-lg-4 justify-content-end">
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
@@ -208,6 +274,19 @@
     loop: true
 
     })
+</script>
+<script>
+    $('.progress_laravel').circleProgress({
+        max: 100,
+        value: 80,
+        textFormat: 'percent',
+    });
+    $('.progress').circleProgress({
+        max: 100,
+        value: 60,
+        textFormat: 'percent',
+    });
+
 </script>
 
 <script src="<?php echo e(asset('storage/assets/js/anijs.js')); ?>"></script>
