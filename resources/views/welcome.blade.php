@@ -155,9 +155,13 @@
                             <h2 class="ps-4 display-5"><b>Education</b></h2>
                         </div>
                         <div class="col-12 ">
-                            <h4 class="ps-4 pb-3"><b>Current Job</b></h4>
-                            <h4 class="ps-4 font-monospace">PAKAR SCIENO TW SDN BHD</h4>
-                            <h4 class="ps-4 font-monospace">EXECUTIVE IT</h4>
+                            <div class="card" style="width: 18rem;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                              </div>
                         </div>
                     </div>
                 </div>
