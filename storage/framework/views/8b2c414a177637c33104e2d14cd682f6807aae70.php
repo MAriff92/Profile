@@ -294,4 +294,4 @@
 </script>
 
 <script src="<?php echo e(asset('storage/assets/js/anijs.js')); ?>"></script>
-<?php /**PATH D:\laragon\www\Profile\resources\views/welcome.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\Profile\resources\views/profile/profile.blade.php ENDPATH**/ ?>

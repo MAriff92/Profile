@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/create/profile', [ProfileController::class, 'create'])->name('profile.create');
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile.create');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

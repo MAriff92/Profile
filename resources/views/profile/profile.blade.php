@@ -1,13 +1,13 @@
 <html>
     <head>
-        <?php echo app('Illuminate\Foundation\Vite')(['resources/js/app.js','resources/js/fontawesome.js','resources/css/animate.min.css','resources/js/anime.es.js']); ?>
+        @vite(['resources/js/app.js','resources/js/fontawesome.js','resources/css/animate.min.css','resources/js/anime.es.js'])
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
-        <link href='<?php echo e(asset('storage/assets/css/anicollection.css')); ?>' rel='stylesheet'  type='text/css'>
+        <link href='{{asset('storage/assets/css/anicollection.css')}}' rel='stylesheet'  type='text/css'>
 
-        <script src="<?php echo e(asset('storage/assets/js/typed.js')); ?>"></script>
+        <script src="{{asset('storage/assets/js/typed.js')}}"></script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="<?php echo e(asset('storage/assets/js/jquery.circle-progress.min.js')); ?>"></script>
+        <script src="{{asset('storage/assets/js/jquery.circle-progress.min.js')}}"></script>
         <style>
             hr.style-1 {
                 height: 12px;
@@ -87,7 +87,7 @@
             <div class="row pt-5">
                 <div class="col-lg-12 pt-2">
                     <div class="row p-4"style="background-image:linear-gradient(to bottom, rgba(0,0,0,0) 97%,
-                    rgba(255,255,255,1)), url('<?php echo e(asset('storage/img/abstract-dark-blue-futuristic-digital-grid-background.jpg')); ?>');
+                    rgba(255,255,255,1)), url('{{asset('storage/img/abstract-dark-blue-futuristic-digital-grid-background.jpg')}}');
                     no-repeat center center fixed;
                     -webkit-background-size: cover;
                     -moz-background-size: cover;
@@ -95,7 +95,7 @@
                     -o-background-size: cover;">
                         <div class="col-6">
                             <div class="d-flex aligns-items-center justify-content-center" id="profile_img">
-                                <img src="<?php echo e(asset('storage/img/Profile.jpg')); ?>" class="img-thumbnail rounded-circle" alt="..." width="40%">
+                                <img src="{{asset('storage/img/Profile.jpg')}}" class="img-thumbnail rounded-circle" alt="..." width="40%">
                             </div>
                         </div>
                         <div class="col-6">
@@ -293,5 +293,4 @@
 
 </script>
 
-<script src="<?php echo e(asset('storage/assets/js/anijs.js')); ?>"></script>
-<?php /**PATH D:\laragon\www\Profile\resources\views/welcome.blade.php ENDPATH**/ ?>
+<script src="{{asset('storage/assets/js/anijs.js')}}"></script>
